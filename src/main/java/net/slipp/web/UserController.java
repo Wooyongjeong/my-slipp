@@ -13,12 +13,12 @@ import net.slipp.domain.User;
 import net.slipp.domain.UserRepository;
 
 @Controller
-@RequestMapping("/users")
+@RequestMapping("users")
 public class UserController {
 	@Autowired
 	private UserRepository userRepository;
 	
-	@GetMapping("/form")
+	@GetMapping("form")
 	public String form() {
 		return "/user/form";
 	}
@@ -36,14 +36,14 @@ public class UserController {
 		return "/user/list";
 	}
 	
-	@GetMapping("/{id}/form")
+	@GetMapping("{id}/form")
 	public String updateForm(@PathVariable Long id, Model model) {
 		User user = userRepository.findById(id).get();
 		model.addAttribute("user", user);
 		return "/user/updateForm";
 	}
 	
-	@PutMapping("/{id}")
+	@PutMapping("{id}")
 	public String update(@PathVariable Long id, User newUser) {
 		User user = userRepository.findById(id).get();
 		user.update(newUser);
