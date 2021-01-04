@@ -1,7 +1,5 @@
 package net.slipp.web;
 
-import java.awt.desktop.UserSessionEvent;
-
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
