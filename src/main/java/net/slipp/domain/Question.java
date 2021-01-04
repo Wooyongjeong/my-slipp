@@ -20,8 +20,11 @@ public class Question {
 	@ManyToOne
 	@JoinColumn(foreignKey=@ForeignKey(name="fk_question_writer"))
 	private User writer;
+	
 	private String title;
+	
 	private String contents;
+	
 	private LocalDateTime createDate;
 	
 	public Question() {}
@@ -45,4 +48,9 @@ public class Question {
 		this.title = title;
 		this.contents = contents;
 	}
+
+	public boolean isSameWriter(User loginUser) {
+		return this.writer.equals(loginUser);
+	}
+	
 }
