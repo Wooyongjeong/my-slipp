@@ -30,6 +30,10 @@ public class User {
 		return id.equals(this.id);
 	}
 	
+	public String getUserId() {
+		return this.userId;
+	}
+	
 	public void setUserId(String userId) {
 		this.userId = userId;
 	}
