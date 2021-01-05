@@ -15,17 +15,17 @@ import net.slipp.domain.User;
 import net.slipp.domain.UserRepository;
 
 @Controller
-@RequestMapping("users")
+@RequestMapping("/users")
 public class UserController {
 	@Autowired
 	private UserRepository userRepository;
 	
-	@GetMapping("loginForm")
+	@GetMapping("/loginForm")
 	public String loginForm() {
-		return "user/login";
+		return "/user/login";
 	}
 	
-	@PostMapping("login")
+	@PostMapping("/login")
 	public String login(String userId, String password, HttpSession session) {
 		User user = userRepository.findByUserId(userId);
 		
@@ -43,16 +43,16 @@ public class UserController {
 		return "redirect:/";
 	}
 	
-	@GetMapping("logout")
+	@GetMapping("/logout")
 	public String logout(HttpSession session) {
 		session.removeAttribute("sessionedUser");
 		
 		return "redirect:/";
 	}
 	
-	@GetMapping("form")
+	@GetMapping("/form")
 	public String form() {
-		return "user/form";
+		return "/user/form";
 	}
 	
 	@PostMapping("")
@@ -65,13 +65,13 @@ public class UserController {
 	@GetMapping("")
 	public String list(Model model) {
 		model.addAttribute("users", userRepository.findAll());
-		return "user/list";
+		return "/user/list";
 	}
 	
-	@GetMapping("{id}/form")
+	@GetMapping("/{id}/form")
 	public String updateForm(@PathVariable Long id, Model model, HttpSession session) {
 		if (HttpSessionUtils.isLoginUser(session)) {
-			return "redirect:/users/loginForm";
+			return "/users/loginForm";
 		}
 		
 		User sessionedUser = HttpSessionUtils.getUserFromSession(session);
@@ -81,10 +81,10 @@ public class UserController {
 		
 		User user = userRepository.findById(id).get();
 		model.addAttribute("user", user);
-		return "user/updateForm";
+		return "/user/updateForm";
 	}
 	
-	@PutMapping("{id}")
+	@PutMapping("/{id}")
 	public String update(@PathVariable Long id, User updatedUser, HttpSession session) {
 		if (HttpSessionUtils.isLoginUser(session)) {
 			return "redirect:/users/loginForm";

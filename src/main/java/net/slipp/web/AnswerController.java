@@ -15,7 +15,7 @@ import net.slipp.domain.QuestionRepository;
 import net.slipp.domain.User;
 
 @Controller
-@RequestMapping("questions/{questionId}/answers")
+@RequestMapping("/questions/{questionId}/answers")
 public class AnswerController {
 	@Autowired
 	private AnswerRepository answerRepository;
@@ -26,7 +26,7 @@ public class AnswerController {
 	@PostMapping("")
 	public String create(@PathVariable Long questionId, String contents, HttpSession session) {
 		if(!HttpSessionUtils.isLoginUser(session)) {
-			return "redirect:/users/loginForm";
+			return "/users/login";
 		}
 		User loginUser = HttpSessionUtils.getUserFromSession(session);
 		Question question = questionRepository.getOne(questionId);

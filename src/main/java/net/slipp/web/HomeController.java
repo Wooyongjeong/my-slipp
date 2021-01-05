@@ -15,6 +15,6 @@ public class HomeController {
 	@GetMapping("")
 	public String home(Model model) {
 		model.addAttribute("questions", questionRepository.findAll());
-		return "index";
+		return "/index";
 	}
 }
