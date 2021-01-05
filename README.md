@@ -1,3 +1,7 @@
+# my-slipp
+ 박재성님의 [자바 웹 애플리케이션 과정](https://youtube.com/playlist?list=PLqaSEyuwXkSppQAjwjXZgKkjWbFoUdNXC) 강의를 따라 만들었습니다. <br>
+ aws ec2 외부 서버에 웹 애플리케이션을 배포하였고, [링크](http://ec2-54-180-95-79.ap-northeast-2.compute.amazonaws.com:8080)를 통해 열어볼 수 있습니다.
+
 # 반복주기 1
 ## 1-1. 로컬 개발 환경 세팅
 * spring boot project
