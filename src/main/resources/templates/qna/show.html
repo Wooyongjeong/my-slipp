@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="kr">
-<head>
-{{> include/header}}
+<head>{{> include/header}}
 </head>
 <body>
 	{{> include/navigation}}
@@ -23,26 +22,24 @@
 							</div>
 							<div class="article-header-text">
 								<a href="/users/92/kimmunsu" class="article-author-name">{{writer.userId}}</a>
-								<a href="/questions/413" class="article-header-time"title="퍼머링크">
-									{{formattedCreateDate}}
-									<i class="icon-link"></i>
+								<a href="/questions/413" class="article-header-time"
+									title="퍼머링크"> {{formattedCreateDate}} <i class="icon-link"></i>
 								</a>
 							</div>
 						</div>
-						<div class="article-doc">
-							{{contents}}
-						</div>
+						<div class="article-doc">{{contents}}</div>
 						<div class="article-util">
 							<ul class="article-util-list">
-								<li><a class="link-modify-article" href="/questions/{{id}}/form">수정</a></li>
+								<li><a class="link-modify-article"
+									href="/questions/{{id}}/form">수정</a></li>
 								<li>
-									<form class="form-delete" action="/questions/{{id}}" method="POST">
+									<form class="form-delete" action="/questions/{{id}}"
+										method="POST">
 										<input type="hidden" name="_method" value="DELETE">
 										<button class="link-delete-article" type="submit">삭제</button>
 									</form>
 								</li>
-								<li><a class="link-modify-article" href="/">목록</a>
-								</li>
+								<li><a class="link-modify-article" href="/">목록</a></li>
 							</ul>
 						</div>
 					</article>
@@ -84,11 +81,14 @@
 									</div>
 								</article>
 								{{/answers}}
-								<form class="submit-write" method="post" action="/questions/{{id}}/answers">
+								<form class="answer-write" method="post"
+									action="/api/questions/{{id}}/answers">
 									<div class="form-group" style="padding: 14px;">
-										<textarea class="form-control"placeholder="Update your status" name="contents"></textarea>
+										<textarea class="form-control"
+											placeholder="Update your status" name="contents"></textarea>
 									</div>
-									<input type="submit" class="btn btn-success pull-right" value="답변하기" />
+									<input type="submit" class="btn btn-success pull-right"
+										value="답변하기" />
 									<div class="clearfix" />
 								</form>
 							</div>
@@ -99,8 +99,7 @@
 			{{/question}}
 		</div>
 	</div>
-
-	<script type="text/template" id="answerTemplate">
+<script type="text/template" id="answerTemplate">
 	<article class="article">
 		<div class="article-header">
 			<div class="article-header-thumb">
