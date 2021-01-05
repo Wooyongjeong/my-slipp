@@ -1,4 +1,4 @@
-INSERT INTO USER (USER_ID, PASSWORD, NAME, EMAIL) VALUES ('test', 'asdf', '우용', 'test@test.com');
-INSERT INTO USER (USER_ID, PASSWORD, NAME, EMAIL) VALUES ('wooyong', 'asdf', '정우용', 'wooyong@test.com');
+INSERT INTO USER (USER_ID, PASSWORD, NAME, EMAIL, CREATE_DATE, MODIFIED_DATE) VALUES ('test', 'asdf', '우용', 'test@test.com', CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+INSERT INTO USER (USER_ID, PASSWORD, NAME, EMAIL, CREATE_DATE, MODIFIED_DATE) VALUES ('wooyong', 'asdf', '정우용', 'wooyong@test.com', CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
 INSERT INTO QUESTION (id, writer_id, title, contents, create_date, count_of_answer) VALUES (1, 1, 'Lorem Ipsum', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere efficitur metus. Fusce interdum volutpat justo, id efficitur risus ultrices sed. Nulla luctus purus a gravida semper.', CURRENT_TIMESTAMP(), 0);
 INSERT INTO QUESTION (id, writer_id, title, contents, create_date, count_of_answer) VALUES (2, 2, 'Lorem Ipsum 2', 'Aenean posuere arcu vitae fringilla tempor. Nullam in dolor non massa eleifend cursus vel id orci. Fusce volutpat arcu vitae tellus tempor elementum. Proin facilisis efficitur lectus ac viverra. Fusce ut quam enim.', CURRENT_TIMESTAMP(), 0);
