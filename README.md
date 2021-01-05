@@ -1,6 +1,13 @@
 # my-slipp
- 박재성님의 [자바 웹 애플리케이션 과정](https://youtube.com/playlist?list=PLqaSEyuwXkSppQAjwjXZgKkjWbFoUdNXC) 강의를 따라 만들었습니다. <br>
+ 박재성님의 [자바 웹 애플리케이션 과정](https://youtube.com/playlist?list=PLqaSEyuwXkSppQAjwjXZgKkjWbFoUdNXC) 강의를 따라 만든 . <br>
  aws ec2 외부 서버에 웹 애플리케이션을 배포하였고, [링크](http://ec2-54-180-95-79.ap-northeast-2.compute.amazonaws.com:8080)를 통해 열어볼 수 있습니다.
+![main](https://user-images.githubusercontent.com/38418028/103629654-f5517b00-4f83-11eb-87d9-ebfda3558796.png)
+![join](https://user-images.githubusercontent.com/38418028/103629662-f71b3e80-4f83-11eb-8af0-d662f7b395fe.png)
+![login](https://user-images.githubusercontent.com/38418028/103629667-f84c6b80-4f83-11eb-840d-89a9ce47c67e.png)
+![question](https://user-images.githubusercontent.com/38418028/103629670-f97d9880-4f83-11eb-80f4-f74bf39f7f61.png)
+![answer](https://user-images.githubusercontent.com/38418028/103629674-faaec580-4f83-11eb-9d63-2e1ac6478846.png)
+![main_after_answer](https://user-images.githubusercontent.com/38418028/103629679-fb475c00-4f83-11eb-8fc2-815b6a97b985.png)
+
 
 # 반복주기 1
 ## 1-1. 로컬 개발 환경 세팅
