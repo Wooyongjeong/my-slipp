@@ -93,7 +93,7 @@ public class QuestionController {
 			Question question = questionRepository.findById(id).get();
 			hasPermission(session, question);
 			questionRepository.deleteById(id);
-			return "/qna/updateForm";
+			return "redirect:/";
 		} catch (IllegalStateException e) {
 			model.addAttribute("errorMessage", e.getMessage());
 			return "/user/login";
