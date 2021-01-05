@@ -27,9 +27,37 @@ function onError() {
 function onSuccess(data, status) {
 	console.log(data);
 	var answerTemplate = $("#answerTemplate").html();
-	var template = answerTemplate.format(data.writer.userId, data.formattedCreateDate, data.contents, data.id, data.id);
+	var template = answerTemplate.format(data.writer.userId, data.formattedCreateDate, data.contents, data.question.id ,data.id);
 	$(".qna-comment-slipp-articles").prepend(template);
 	$(".answer-write textarea").val('');
+}
+
+$(document).on('click', ".link-delete-article", deleteAnswer);
+// $(".link-delete-article").click(deleteAnswer); // 이 방식의 문제점은 동적으로 생성한 html의 경우에는 onclick을 달지 못하는 거임
+
+function deleteAnswer(e) {
+	e.preventDefault();
+	
+	var deleteBtn = $(this);
+	var url = deleteBtn.attr("href");
+	console.log(url);
+	
+	$.ajax({
+		type: 'delete',
+		url: url,
+		dataType: 'json',
+		error: function(xhr, status) {
+			console.log("error");
+		},
+		success: function(data, status) {
+			console.log(data);
+			if (data.valid) {
+				deleteBtn.closest("article").remove();
+			} else {
+				alert(data.errorMessage);
+			}
+		}
+	});
 }
 
 String.prototype.format = function() {
