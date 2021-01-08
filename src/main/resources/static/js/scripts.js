@@ -32,7 +32,7 @@ function onSuccess(data, status) {
 	$(".answer-write textarea").val('');
 }
 
-$(document).on('click', ".link-delete-article", deleteAnswer);
+$(document).on('click', ".link-delete-answer", deleteAnswer);
 // $(".link-delete-article").click(deleteAnswer); // 이 방식의 문제점은 동적으로 생성한 html의 경우에는 onclick을 달지 못하는 거임
 
 function deleteAnswer(e) {
@@ -58,6 +58,33 @@ function deleteAnswer(e) {
 			}
 		}
 	});
+}
+
+$(document).on('click', ".link-modify-answer", modifyAnswer);
+
+function modifyAnswer(e) {
+	e.preventDefault();
+	
+	var modifyBtn = $(this);
+	var url = modifyBtn.attr("href");
+	console.log(url);
+	
+	$.ajax({
+		type: 'put',
+		url: url,
+		dataType: 'json',
+		error: function(xhr, status) {
+			console.log("error");
+		},
+		success: function(data, status) {
+			console.log(data);
+			if(data.valid) {
+				console.log("success");
+			} else {
+				alert(data.errorMessage);
+			}
+		}
+	})
 }
 
 String.prototype.format = function() {
