@@ -2,7 +2,7 @@
  박재성님의 [자바 웹 애플리케이션 과정](https://youtube.com/playlist?list=PLqaSEyuwXkSppQAjwjXZgKkjWbFoUdNXC) 강의를 따라 만든 질문-답변 게시판입니다. <br>
  `spring boot`를 이용하여 만들었고, `h2 database`를 이용하였습니다.<br>
  회원가입, 로그인, 질문 및 답변 작성, 질문과 답변 수정 및 삭제 기능을 구현하였습니다. <br>
- aws ec2 외부 서버에 웹 애플리케이션을 배포하였고, [링크](http://ec2-54-180-95-79.ap-northeast-2.compute.amazonaws.com:8080)를 통해 열어볼 수 있습니다.
+ aws ec2 외부 서버에 웹 애플리케이션을 배포하였고, [링크](http://ec2-3-36-132-163.ap-northeast-2.compute.amazonaws.com:8080)를 통해 열어볼 수 있습니다.
 ![main](https://user-images.githubusercontent.com/38418028/103629654-f5517b00-4f83-11eb-87d9-ebfda3558796.png)
 ![join](https://user-images.githubusercontent.com/38418028/103629662-f71b3e80-4f83-11eb-8af0-d662f7b395fe.png)
 ![login](https://user-images.githubusercontent.com/38418028/103629667-f84c6b80-4f83-11eb-840d-89a9ce47c67e.png)
