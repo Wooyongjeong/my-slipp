@@ -60,6 +60,7 @@ public class QuestionController {
 		return "/qna/updateForm";
 	}
 	
+	
 	private Result valid(HttpSession session, Question question) {
 		if(!HttpSessionUtils.isLoginUser(session)) {
 			return Result.fail("로그인이 필요합니다");
@@ -70,6 +71,7 @@ public class QuestionController {
 		}
 		return Result.ok();
 	}
+	
 	
 	private boolean hasPermission(HttpSession session, Question question) {
 		if(!HttpSessionUtils.isLoginUser(session)) {

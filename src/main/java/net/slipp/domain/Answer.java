@@ -38,6 +38,10 @@ public class Answer extends AbstractEntity{
 		this.contents = contents;
 	}
 	
+	public void update(String contents) {
+		this.contents = contents;
+	}
+	
 	public boolean isSameWriter(User loginUser) {
 		return loginUser.equals(this.writer);
 	}
